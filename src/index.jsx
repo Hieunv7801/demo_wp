@@ -2,12 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./css/style.css";
 import styles from "./css/card.module.css";
+import image1 from "./images/396-3966460_fpt-fpt-software-logo-png-clipart.png";
+import "./scss/book.module.scss";
 
 function App() {
   return (
     <div className={styles.app}>
       <header className={styles.header}>
-        <h1 className={styles.title}>My Beautiful Website</h1>
+        <h1 className={styles.title}>ĐÂY LÀ WEB DEMO THÔI</h1>
         <nav className={styles.nav}>
           <ul>
             <li>
@@ -39,6 +41,20 @@ function App() {
           <p className={styles.sectionText}>
             This is a beautiful and creative website built with React.
           </p>
+          <div className="cart-item-product">
+            <img
+              className="product-image"
+              src={image1}
+              alt="Product"
+              width={"100px"}
+            />
+            <div className="product-details">
+              <div className="product-title">Product Name</div>
+              <div className="product-price">$19.99</div>
+            </div>
+            <div className="product-quantity">Quantity: 2</div>
+            <div className="product-remove">Remove</div>
+          </div>
         </section>
       </main>
       <footer className={styles.footer}>

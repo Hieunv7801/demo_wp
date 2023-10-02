@@ -21,6 +21,15 @@ module.exports = {
           },
         },
       },
+      //loading scss
+      {
+        test: /\.scss$/,
+        use: [
+          "style-loader", // Thêm CSS vào DOM thông qua thẻ <style>
+          "css-loader", // Xử lý và import CSS
+          "sass-loader", // Biên dịch SCSS thành CSS
+        ],
+      },
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
@@ -39,6 +48,18 @@ module.exports = {
           },
         ],
         include: /\.module\.css$/,
+      },
+      // loading image
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              outputPath: "images", // Đưa các tệp ảnh đến thư mục 'images' trong thư mục đầu ra
+            },
+          },
+        ],
       },
     ],
   },
